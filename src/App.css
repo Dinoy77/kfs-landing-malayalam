@@ -1,18 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+Malayalam:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap');
 
-:root {
-  --red: #c0392b;
-  --navy: #1a2357;
-  --green: #2e7d32;
-  --gold: #f5a623;
-  --bg: #fdfaf6;
-  --text: #1a1a2e;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+@keyframes livepulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.5); }
+}
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+/* ── Navbar ── */
+@media (max-width: 768px) {
+  .nav-links  { display: none !important; }
+  .hamburger  { display: flex !important; }
+}
+
+/* ── Hero ── */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 80px 5% 0 !important;
+  }
+  .hero-headline {
+    font-size: 32px !important;
+  }
+  .hero-subtitle {
+    font-size: 15px !important;
+  }
+  .hero-btns {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .hero-btns a {
+    justify-content: center !important;
+  }
+  .hero-stats {
+    max-width: 100% !important;
+  }
+}
+
+/* ── Problem stats ── */
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .problem-card {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
+
+/* ── Courses ── */
+@media (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Solution ── */
+@media (max-width: 900px) {
+  .solution-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+/* ── Footer ── */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 560px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
 }
