@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Phone } from 'lucide-react'
+import { Phone, Menu, X } from 'lucide-react'
 import logo from '../assets/kfs_logo.jpeg'
 
 export default function Navbar() {
@@ -8,61 +8,101 @@ export default function Navbar() {
   return (
     <>
       <nav style={{
-        position: 'sticky', top: 0, zIndex: 100,
-        background: 'white', borderBottom: '3px solid #c0392b',
-        display: 'flex', alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '10px 6%',
+        position: 'sticky', top: 0, zIndex: 1000,
+        background: 'white',
+        borderBottom: '3px solid #c0392b',
         boxShadow: '0 2px 20px rgba(0,0,0,0.08)'
       }}>
-        <img src={logo} alt="KFS Logo" style={{ height: 56, objectFit: 'contain' }} />
-
-        <div style={{ display: 'flex', gap: 32, fontWeight: 600, fontSize: 15 }} className="nav-links">
-          {['Home', 'About', 'Courses', 'Contact'].map(item => (
-            <a key={item} href={`#${item.toLowerCase()}`}
-              style={{ color: '#1a2357', textDecoration: 'none', letterSpacing: 0.3 }}
-              onMouseEnter={e => e.target.style.color = '#c0392b'}
-              onMouseLeave={e => e.target.style.color = '#1a2357'}>
-              {item}
-            </a>
-          ))}
-        </div>
-
-        <a href="tel:7736025600" style={{
-          background: '#c0392b', color: 'white',
-          padding: '10px 22px', borderRadius: 6,
-          fontWeight: 700, textDecoration: 'none', fontSize: 14,
-          display: 'flex', alignItems: 'center', gap: 8,
-          boxShadow: '0 4px 14px rgba(192,57,43,0.35)'
+        <div style={{
+          display: 'flex', alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '10px 6%',
+          maxWidth: 1280, margin: '0 auto'
         }}>
-          <Phone size={15} /> Call Now
-        </a>
+          <img src={logo} alt="KFS Logo" style={{ height: 52, objectFit: 'contain' }} />
 
-        <button onClick={() => setMenuOpen(!menuOpen)}
-          className="hamburger"
-          style={{ display: 'none', background: 'none', border: 'none', cursor: 'pointer', flexDirection: 'column', gap: 5 }}
-          aria-label="Menu">
-          <span style={{ display: 'block', width: 24, height: 2, background: '#1a2357', borderRadius: 2 }} />
-          <span style={{ display: 'block', width: 24, height: 2, background: '#1a2357', borderRadius: 2 }} />
-          <span style={{ display: 'block', width: 24, height: 2, background: '#1a2357', borderRadius: 2 }} />
-        </button>
+          {/* Desktop links */}
+          <div style={{ display: 'flex', gap: 32, fontWeight: 600, fontSize: 15 }}
+            className="nav-links">
+            {['Home', 'About', 'Courses', 'Contact'].map(item => (
+              <a key={item} href={`#${item.toLowerCase()}`}
+                style={{ color: '#1a2357', textDecoration: 'none' }}
+                onMouseEnter={e => e.target.style.color = '#c0392b'}
+                onMouseLeave={e => e.target.style.color = '#1a2357'}>
+                {item}
+              </a>
+            ))}
+          </div>
+
+          {/* Desktop CTA */}
+          <a href="tel:7736025600"
+            className="nav-cta"
+            style={{
+              background: '#c0392b', color: 'white',
+              padding: '10px 22px', borderRadius: 6,
+              fontWeight: 700, textDecoration: 'none', fontSize: 14,
+              display: 'flex', alignItems: 'center', gap: 8,
+            }}>
+            <Phone size={15} /> Call Now
+          </a>
+
+          {/* Mobile hamburger */}
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            style={{
+              display: 'none', background: 'none',
+              border: 'none', cursor: 'pointer', padding: 4
+            }}>
+            {menuOpen ? <X size={26} color="#1a2357" /> : <Menu size={26} color="#1a2357" />}
+          </button>
+        </div>
       </nav>
 
+      {/* Mobile dropdown */}
       {menuOpen && (
         <div style={{
-          background: 'white', padding: '16px 6%',
-          borderBottom: '1px solid #eee',
-          display: 'flex', flexDirection: 'column', gap: 16
+          position: 'fixed', top: 75, left: 0, right: 0,
+          background: 'white', zIndex: 999,
+          borderBottom: '2px solid #c0392b',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+          padding: '16px 6% 20px',
+          display: 'flex', flexDirection: 'column', gap: 4
         }}>
           {['Home', 'About', 'Courses', 'Contact'].map(item => (
             <a key={item} href={`#${item.toLowerCase()}`}
               onClick={() => setMenuOpen(false)}
-              style={{ color: '#1a2357', fontWeight: 600, textDecoration: 'none', fontSize: 16 }}>
+              style={{
+                color: '#1a2357', fontWeight: 600,
+                textDecoration: 'none', fontSize: 16,
+                padding: '12px 0',
+                borderBottom: '1px solid #f0ece6'
+              }}>
               {item}
             </a>
           ))}
+          <a href="tel:7736025600"
+            onClick={() => setMenuOpen(false)}
+            style={{
+              display: 'flex', alignItems: 'center',
+              justifyContent: 'center', gap: 8,
+              marginTop: 12, background: '#c0392b',
+              color: 'white', padding: '13px',
+              borderRadius: 8, fontWeight: 700, fontSize: 15,
+              textDecoration: 'none'
+            }}>
+            <Phone size={16} /> 7736025600
+          </a>
         </div>
       )}
+
+      <style>{`
+        @media (max-width: 768px) {
+          .nav-links { display: none !important; }
+          .nav-cta { display: none !important; }
+          .hamburger { display: block !important; }
+        }
+      `}</style>
     </>
   )
 }
