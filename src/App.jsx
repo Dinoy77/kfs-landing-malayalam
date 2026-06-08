@@ -58,7 +58,7 @@ export default function App() {
           display: 'flex', alignItems: 'center', gap: 8,
           boxShadow: '0 4px 14px rgba(192,57,43,0.35)'
         }}>
-          <Phone size={15} /> Call Now
+          <Phone size={15} /> Call No
         </a>
 
         {/* Hamburger */}
