@@ -3,7 +3,8 @@ import logo from '../assets/kfs_logo.jpeg'
 
 const courses = [
   'BSc Chemistry', 'BSc Microbiology',
-  'BSc Botany', 'BSc Zoology', 'BSc Biochemistry'
+  'BSc Botany', 'BSc Zoology',
+  'BSc Biochemistry', 'BSc Genetics'
 ]
 
 export default function Footer() {

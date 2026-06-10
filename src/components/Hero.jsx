@@ -15,11 +15,11 @@ export default function Hero() {
     <section id="home" style={{
       minHeight: '100vh',
       background: `
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,200,0,0.45) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at -5% 80%, rgba(245,166,35,0.35) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 50% at 105% 90%, rgba(245,166,35,0.2) 0%, transparent 55%),
-        linear-gradient(160deg, #150f00 0%, #231600 40%, #1a1000 100%)
-      `,
+  radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,220,0,0.9) 0%, rgba(255,160,0,0.4) 40%, transparent 70%),
+  radial-gradient(ellipse 50% 40% at 0% 80%, rgba(255,180,0,0.5) 0%, transparent 60%),
+  radial-gradient(ellipse 40% 40% at 100% 60%, rgba(220,100,0,0.35) 0%, transparent 60%),
+  linear-gradient(180deg, #1a0f00 0%, #0d0800 60%, #080500 100%)
+`,
       color: 'white',
       display: 'grid',
       gridTemplateColumns: '55% 45%',
@@ -41,18 +41,37 @@ export default function Hero() {
       }} />
 
       {/* Glows */}
+      {/* Bright top illumination */}
       <div style={{
-        position: 'absolute', width: 600, height: 400,
-        borderRadius: '50%', top: -150, left: '30%',
+        position: 'absolute', width: 800, height: 500,
+        borderRadius: '50%', top: -300, left: '50%',
         transform: 'translateX(-50%)',
-        background: 'radial-gradient(circle, rgba(255,200,0,0.3) 0%, transparent 65%)',
+        background: 'radial-gradient(circle, rgba(255,220,0,0.95) 0%, rgba(255,160,0,0.5) 40%, transparent 70%)',
+        filter: 'blur(80px)', pointerEvents: 'none'
+      }} />
+
+      {/* Left warm glow */}
+      <div style={{
+        position: 'absolute', width: 500, height: 500,
+        borderRadius: '50%', bottom: -100, left: -80,
+        background: 'radial-gradient(circle, rgba(255,180,0,0.45) 0%, transparent 65%)',
         filter: 'blur(60px)', pointerEvents: 'none'
       }} />
+
+      {/* Right orange glow */}
       <div style={{
         position: 'absolute', width: 400, height: 400,
-        borderRadius: '50%', bottom: -100, left: -80,
-        background: 'radial-gradient(circle, rgba(245,166,35,0.25) 0%, transparent 65%)',
-        filter: 'blur(50px)', pointerEvents: 'none'
+        borderRadius: '50%', top: '40%', right: -100,
+        background: 'radial-gradient(circle, rgba(220,80,0,0.3) 0%, transparent 65%)',
+        filter: 'blur(60px)', pointerEvents: 'none'
+      }} />
+
+      {/* Center soft halo */}
+      <div style={{
+        position: 'absolute', width: 600, height: 200,
+        borderRadius: '50%', top: '35%', left: '25%',
+        background: 'radial-gradient(circle, rgba(255,200,0,0.12) 0%, transparent 70%)',
+        filter: 'blur(40px)', pointerEvents: 'none'
       }} />
 
       {/* ── LEFT — Text ── */}
@@ -216,33 +235,19 @@ export default function Hero() {
               objectPosition: 'center 10%',
               display: 'block',
               maskImage: 'linear-gradient(to left, rgba(0,0,0,0.95) 40%, transparent 100%), linear-gradient(to top, transparent 0%, black 20%)',
-              WebkitMaskImage: 'linear-gradient(to left, black 30%, transparent 75%)',
-              maskImage: 'linear-gradient(to left, black 30%, transparent 75%)',
+              WebkitMaskImage: `
+  linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+  linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)
+`,
+              maskImage: `
+  linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+  linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%)
+`,
+              maskComposite: 'intersect',
+              WebkitMaskComposite: 'source-in',
             }}
           />
-
-          {/* Blend left edge */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: 'linear-gradient(to right, #1a1000 0%, rgba(26,16,0,0.85) 15%, rgba(26,16,0,0.2) 40%, transparent 60%)',
-            pointerEvents: 'none'
-          }} />
-
-          {/* Blend bottom edge */}
-          <div style={{
-            position: 'absolute', bottom: 0, left: 0, right: 0,
-            height: '30%',
-            background: 'linear-gradient(to top, #1a1000, transparent)',
-            pointerEvents: 'none'
-          }} />
-
-          {/* Blend top edge */}
-          <div style={{
-            position: 'absolute', top: 0, left: 0, right: 0,
-            height: '15%',
-            background: 'linear-gradient(to bottom, #150f00, transparent)',
-            pointerEvents: 'none'
-          }} />
+          
         </div>
 
       </motion.div>

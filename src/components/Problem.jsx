@@ -9,7 +9,7 @@ const fadeUp = {
 }
 
 const cards = [
-    { icon: '📋', text: 'ബിഎസ്സി കെമിസ്ട്രി, ബിഎസ്സി മൈക്രോബയോളജി, ബിഎസ്സി ബോട്ടണി, ബിഎസ്സി സുവോളജി, ബിഎസ്സി ബയോകെമിസ്ട്രി എന്നീ കോഴ്‌സുകൾ കഴിഞ്ഞ ബിരുദധാരികൾ ജോലി ലഭിക്കാൻ ബുദ്ധിമുട്ടുകയാണ്.' },
+    { icon: '📋', text: 'ബിഎസ്സി കെമിസ്ട്രി, ബിഎസ്സി മൈക്രോബയോളജി, ബിഎസ്സി ബോട്ടണി, ബിഎസ്സി സുവോളജി, ബിഎസ്സി ബയോകെമിസ്ട്രി,ബിഎസ്സി ജനറ്റിക്സ് എന്നീ കോഴ്‌സുകൾ കഴിഞ്ഞ ബിരുദധാരികൾ ജോലി ലഭിക്കാൻ ബുദ്ധിമുട്ടുകയാണ്.' },
     { icon: '🎯', text: 'പ്രധാനമായും ഇവരിൽ പലരും ശരിയായ കരിയർ പ്ലാൻ ചെയ്യാതെയാണ് ഈ കോഴ്സുകൾക്ക് അഡ്മിഷൻ എടുക്കുന്നത്. കോഴ്സ് കഴിയുമ്പോൾ ഈ ഡിഗ്രികൾ കൊണ്ട് ഉദ്ദേശിച്ചത് പോലെ ജോലിയോ ഉപയോഗമോ ലഭിക്കുന്നില്ല.' },
     { icon: '📊', text: 'മറ്റ് പ്രൊഫഷണൽ കോഴ്സുകളുമായി താരതമ്യം ചെയ്യുമ്പോൾ, മേൽ പറഞ്ഞ കോഴ്സുകൾ ചെയ്ത വിദ്യാർത്ഥികളുടെ എണ്ണം താരതമ്യേന ഒരുപാട് കൂടുതലാണ്.' },
 ]
@@ -39,12 +39,12 @@ export default function Problem() {
                         className="problem-card"
                         style={{
                             display: 'flex', gap: 18, alignItems: 'flex-start',
-                            background: '#fdfaf6', border: '1px solid #e8e2da',
+                            background: '#1a2357', border: '1px solid #243070',
                             borderLeft: '4px solid #c0392b', borderRadius: 12,
                             padding: '22px 26px', marginBottom: 18
                         }}>
                         <span style={{ fontSize: 26, flexShrink: 0 }}>{card.icon}</span>
-                        <p style={{ fontFamily: "'Noto Sans Malayalam', sans-serif", fontSize: 'clamp(14px, 1.8vw, 17px)', lineHeight: 1.95, color: '#2a2a3e', margin: 0 }}>
+                        <p style={{ fontFamily: "'Noto Sans Malayalam', sans-serif", fontSize: 'clamp(14px, 1.8vw, 17px)', lineHeight: 1.95, color: 'rgba(255,255,255,0.85)', margin: 0}}>
                             {card.text}
                         </p>
                     </motion.div>

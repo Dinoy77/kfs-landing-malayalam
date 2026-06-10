@@ -14,6 +14,7 @@ const courses = [
   { icon: '🌿', name: 'BSc Botany' },
   { icon: '🐾', name: 'BSc Zoology' },
   { icon: '🧬', name: 'BSc Biochemistry' },
+  { icon: '🔬', name: 'BSc Genetics' },
 ]
 
 export default function Courses() {
