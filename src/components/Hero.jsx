@@ -183,7 +183,7 @@ export default function Hero() {
             paddingTop: 20, maxWidth: 360,
           }}>
           {[
-            { number: '5+', label: 'Science Streams', icon: '🔬' },
+            { number: '6+', label: 'Science Streams', icon: '🔬' },
             { number: '1000+', label: 'Students Helped', icon: '🎓' },
             { number: '100%', label: 'Career Focused', icon: '💼' },
           ].map(({ number, label, icon }, i) => (

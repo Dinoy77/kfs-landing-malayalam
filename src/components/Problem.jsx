@@ -15,7 +15,7 @@ const cards = [
 ]
 
 const stats = [
-    { number: '5+', label: 'Science Streams Affected' },
+    { number: '6+', label: 'Science Streams Affected' },
     { number: '1000s', label: 'Graduates Without Jobs' },
     { number: '1', label: 'Solution — KFS Bridge' },
 ]
