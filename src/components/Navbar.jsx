@@ -11,18 +11,19 @@ export default function Navbar() {
         position: 'sticky', top: 0, zIndex: 1000,
         background: 'white',
         borderBottom: '3px solid #c0392b',
-        boxShadow: '0 2px 20px rgba(0,0,0,0.08)'
+        boxShadow: '0 2px 20px rgba(0,0,0,0.08)',
+        overflow: 'hidden'
       }}>
         <div style={{
           display: 'flex', alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '10px 6%',
+          padding: '0 6%',
           maxWidth: 1280, margin: '0 auto'
         }}>
-          <img src={logo} alt="KFS Logo" style={{ height: 52, objectFit: 'contain' }} />
+          <img src={logo} alt="KFS Logo" style={{ height: 100, objectFit: 'contain' }} />
 
           {/* Desktop links */}
-          <div style={{ display: 'flex', gap: 32, fontWeight: 600, fontSize: 15 }}
+          <div style={{ display: 'flex', gap: 32, fontWeight: 600, fontSize: 18 }}
             className="nav-links">
             {['Home', 'About', 'Courses', 'Contact'].map(item => (
               <a key={item} href={`#${item.toLowerCase()}`}
