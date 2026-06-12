@@ -17,13 +17,13 @@ export default function Navbar() {
         <div style={{
           display: 'flex', alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '0 6%',
+          padding: '12px 6%',
           maxWidth: 1280, margin: '0 auto'
         }}>
-          <img src={logo} alt="KFS Logo" style={{ height: 100, objectFit: 'contain' }} />
+          <img src={logo} alt="KFS Logo" style={{ height: 65, objectFit: 'contain' }} />
 
           {/* Desktop links */}
-          <div style={{ display: 'flex', gap: 32, fontWeight: 600, fontSize: 18 }}
+          <div style={{ display: 'flex', gap: 32, fontWeight: 700, fontSize: 20 }}
             className="nav-links">
             {['Home', 'About', 'Courses', 'Contact'].map(item => (
               <a key={item} href={`#${item.toLowerCase()}`}
@@ -98,12 +98,18 @@ export default function Navbar() {
       )}
 
       <style>{`
-        @media (max-width: 768px) {
-          .nav-links { display: none !important; }
-          .nav-cta { display: none !important; }
-          .hamburger { display: block !important; }
-        }
-      `}</style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+  .nav-links a {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 18px !important;
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none !important; }
+    .nav-cta { display: none !important; }
+    .hamburger { display: block !important; }
+  }
+`}</style>
     </>
   )
 }

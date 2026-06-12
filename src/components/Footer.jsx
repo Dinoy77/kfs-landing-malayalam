@@ -120,7 +120,7 @@ export default function Footer() {
         alignItems: 'center', flexWrap: 'wrap', gap: 8,
         fontSize: 12, color: 'rgba(255,255,255,0.35)'
       }}>
-        <p>© {new Date().getFullYear()} Kerala Finishing School. All rights reserved.</p>
+        <p>© 2026 Developed & Maintained by KFS Innovations Pvt Ltd</p>
         <p style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>
           കേരള ഫിനിഷിംഗ് സ്കൂൾ · തിരുവനന്തപുരം
         </p>
