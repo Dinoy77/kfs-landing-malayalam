@@ -9,7 +9,7 @@ const courses = [
 
 export default function Footer() {
   return (
-    <footer id="contact" style={{ background: '#1a1a2e', color: 'white' }}>
+    <footer id="contact" style={{ background: '#fff', color: '#1a1a2e' }}>
 
       <div className="footer-grid" style={{
         maxWidth: 1200, margin: '0 auto',
@@ -30,7 +30,7 @@ export default function Footer() {
             കേരള ഫിനിഷിംഗ് സ്കൂൾ
           </p>
           <p style={{
-            fontSize: 13, color: 'rgba(255,255,255,0.55)',
+            fontSize: 13, color: 'rgba(0,0,0,0.55)',
             lineHeight: 1.7, maxWidth: 260
           }}>
             Empowering science graduates with professional bridge courses
@@ -42,18 +42,18 @@ export default function Footer() {
         <div>
           <p style={{
             fontSize: 11, fontWeight: 700, letterSpacing: 2,
-            textTransform: 'uppercase', color: 'white', marginBottom: 18
+            textTransform: 'uppercase', color: '#1a1a2e', marginBottom: 18
           }}>
             Quick Links
           </p>
           {['Home', 'About', 'Courses', 'Contact'].map(item => (
             <a key={item} href={`#${item.toLowerCase()}`}
               style={{
-                display: 'block', color: 'rgba(255,255,255,0.55)',
+                display: 'block', color: 'rgba(0,0,0,0.6)',
                 textDecoration: 'none', fontSize: 14, marginBottom: 10
               }}
-              onMouseEnter={e => e.target.style.color = '#f5a623'}
-              onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.55)'}>
+              onMouseEnter={e => e.target.style.color = '#c0392b'}
+              onMouseLeave={e => e.target.style.color = 'rgba(0,0,0,0.6)'}>
               {item}
             </a>
           ))}
@@ -69,7 +69,7 @@ export default function Footer() {
           </p>
           {courses.map(c => (
             <p key={c} style={{
-              color: 'rgba(255,255,255,0.55)',
+              color: 'rgba(0,0,0,0.6)',
               fontSize: 14, marginBottom: 10
             }}>
               {c}
@@ -88,7 +88,7 @@ export default function Footer() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
             <Phone size={15} color="#f5a623" />
             <a href="tel:7736025600" style={{
-              color: 'rgba(255,255,255,0.85)',
+              color: '#1a1a2e',
               fontSize: 16, fontWeight: 600, textDecoration: 'none'
             }}>
               7736025600
@@ -96,13 +96,13 @@ export default function Footer() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
             <MapPin size={15} color="#f5a623" />
-            <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: 14 }}>
+            <span style={{ color: 'rgba(0,0,0,0.6)', fontSize: 14 }}>
               Thiruvananthapuram, Kerala
             </span>
           </div>
           <a href="tel:7736025600" style={{
             display: 'block', textAlign: 'center',
-            background: '#c0392b', color: 'white',
+            background: '#800000', color: 'white',
             padding: '12px', borderRadius: 8,
             fontWeight: 700, fontSize: 14, textDecoration: 'none'
           }}>
@@ -118,7 +118,7 @@ export default function Footer() {
         maxWidth: 1200, margin: '0 auto',
         display: 'flex', justifyContent: 'space-between',
         alignItems: 'center', flexWrap: 'wrap', gap: 8,
-        fontSize: 12, color: 'rgba(255,255,255,0.35)'
+        fontSize: 12, color: 'rgba(0,0,0,0.45)'
       }}>
         <p>© 2026 Developed & Maintained by KFS Innovations Pvt Ltd</p>
         <p style={{ fontFamily: "'Noto Sans Malayalam', sans-serif" }}>

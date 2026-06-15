@@ -93,7 +93,7 @@ export default function Hero() {
           എന്തുകൊണ്ട് സയൻസ് ബിരുദം
           <br />എടുത്തവർക്ക്{' '}
           <span style={{
-            color: '#1a0a00',
+            color: '#800000',
             textShadow: '0 1px 4px rgba(0,0,0,0.2)',
           }}>
             ജോലി ലഭിക്കുന്നില്ല?
@@ -130,8 +130,8 @@ export default function Hero() {
           className="hero-btns">
           <a href="tel:7736025600" style={{
             display: 'inline-flex', alignItems: 'center', gap: 10,
-            background: '#1a0a00',
-            color: '#ffc200', padding: '14px 28px', borderRadius: 12,
+            background: '#800000',
+            color: 'white', padding: '14px 28px', borderRadius: 12,
             fontWeight: 800, fontSize: 15, textDecoration: 'none',
             boxShadow: '0 8px 28px rgba(0,0,0,0.35)',
             whiteSpace: 'nowrap',

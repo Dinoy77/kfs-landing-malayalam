@@ -17,13 +17,13 @@ const features = [
 
 export default function Solution() {
   return (
-    <section style={{ background: '#111840', color: 'white', padding: '80px 6%' }}>
+    <section style={{ background: '#800000', color: 'white', padding: '80px 6%' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
 
         {/* Top label + heading */}
         <p style={{
           fontSize: 12, fontWeight: 700, letterSpacing: 3,
-          textTransform: 'uppercase', color: '#f5a623', marginBottom: 12
+          textTransform: 'uppercase', color: '#ffc200', marginBottom: 12
         }}>
           Our Solution
         </p>
@@ -33,7 +33,7 @@ export default function Solution() {
             fontFamily: 'Georgia, serif',
             fontSize: 'clamp(22px, 3.5vw, 36px)',
             fontWeight: 800, marginBottom: 20, lineHeight: 1.3,
-            maxWidth: 600
+            maxWidth: 600, color: 'white'
           }}>
           We Are Changing the Future of Science Graduates
         </motion.h2>
@@ -43,10 +43,10 @@ export default function Solution() {
           style={{
             fontFamily: "'Noto Sans Malayalam', sans-serif",
             fontSize: 'clamp(14px, 1.8vw, 17px)',
-            color: 'rgba(255,255,255,0.75)', lineHeight: 1.9,
+            color: 'rgba(255,255,255,0.85)', lineHeight: 1.9,
             marginBottom: 48, padding: '16px 20px',
-            borderLeft: '3px solid #f5a623',
-            background: 'rgba(255,255,255,0.05)',
+            borderLeft: '3px solid #ffc200',
+            background: 'rgba(255,255,255,0.08)',
             borderRadius: '0 8px 8px 0',
             maxWidth: 600
           }}>
@@ -71,14 +71,14 @@ export default function Solution() {
                 style={{
                   display: 'flex', gap: 16,
                   alignItems: 'flex-start', marginBottom: 28,
-                  background: 'rgba(255,255,255,0.04)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: 12, padding: '20px 20px'
+                  background: 'rgba(255,255,255,0.08)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  borderRadius: 12, padding: '20px 20px',
                 }}>
                 <span style={{ fontSize: 28, flexShrink: 0 }}>{f.icon}</span>
                 <div>
-                  <p style={{ fontWeight: 700, color: '#f5a623', fontSize: 15, marginBottom: 6 }}>{f.title}</p>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, margin: 0 }}>{f.desc}</p>
+                  <p style={{ fontWeight: 700, color: '#ffc200', fontSize: 15, marginBottom: 6 }}>{f.title}</p>
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', lineHeight: 1.65, margin: 0 }}>{f.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -89,7 +89,7 @@ export default function Solution() {
             <div style={{
               background: 'white', color: '#1a1a2e',
               borderRadius: 20, padding: '36px 30px',
-              boxShadow: '0 24px 60px rgba(0,0,0,0.4)',
+              boxShadow: '0 24px 60px rgba(0,0,0,0.3)',
             }}>
               <span style={{
                 display: 'inline-block',
@@ -118,10 +118,10 @@ export default function Solution() {
               <a href="tel:7736025600" style={{
                 display: 'flex', alignItems: 'center',
                 justifyContent: 'center', gap: 10,
-                width: '100%', background: '#c0392b', color: 'white',
+                width: '100%', background: '#800000', color: 'white',
                 padding: '15px', borderRadius: 8,
                 fontSize: 18, fontWeight: 800, textDecoration: 'none',
-                boxShadow: '0 8px 24px rgba(192,57,43,0.35)'
+                boxShadow: '0 8px 24px rgba(128,0,0,0.25)'
               }}>
                 <Phone size={20} /> 7736025600
               </a>

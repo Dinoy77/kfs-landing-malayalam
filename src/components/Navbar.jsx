@@ -39,7 +39,7 @@ export default function Navbar() {
           <a href="tel:7736025600"
             className="nav-cta"
             style={{
-              background: '#c0392b', color: 'white',
+              background: '#800000', color: 'white',
               padding: '10px 22px', borderRadius: 6,
               fontWeight: 700, textDecoration: 'none', fontSize: 14,
               display: 'flex', alignItems: 'center', gap: 8,
@@ -87,7 +87,7 @@ export default function Navbar() {
             style={{
               display: 'flex', alignItems: 'center',
               justifyContent: 'center', gap: 8,
-              marginTop: 12, background: '#c0392b',
+              marginTop: 12, background: '#800000',
               color: 'white', padding: '13px',
               borderRadius: 8, fontWeight: 700, fontSize: 15,
               textDecoration: 'none'

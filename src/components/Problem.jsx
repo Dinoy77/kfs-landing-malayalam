@@ -12,13 +12,13 @@ const cards = [
   { icon: '📋', text: 'ബിഎസ്സി കെമിസ്ട്രി, ബിഎസ്സി മൈക്രോബയോളജി, ബിഎസ്സി ബോട്ടണി, ബിഎസ്സി സുവോളജി, ബിഎസ്സി ബയോകെമിസ്ട്രി, ബിഎസ്സി ജനറ്റിക്സ് എന്നീ കോഴ്‌സുകൾ കഴിഞ്ഞ ബിരുദധാരികൾ ജോലി ലഭിക്കാൻ ബുദ്ധിമുട്ടുകയാണ്.' },
   { icon: '🎯', text: 'പ്രധാനമായും ഇവരിൽ പലരും ശരിയായ കരിയർ പ്ലാൻ ചെയ്യാതെയാണ് ഈ കോഴ്സുകൾക്ക് അഡ്മിഷൻ എടുക്കുന്നത്. കോഴ്സ് കഴിയുമ്പോൾ ഈ ഡിഗ്രികൾ കൊണ്ട് ഉദ്ദേശിച്ചത് പോലെ ജോലിയോ ഉപയോഗമോ ലഭിക്കുന്നില്ല.' },
   { icon: '📊', text: 'മറ്റ് പ്രൊഫഷണൽ കോഴ്സുകളുമായി താരതമ്യം ചെയ്യുമ്പോൾ, മേൽ പറഞ്ഞ കോഴ്സുകൾ ചെയ്ത വിദ്യാർത്ഥികളുടെ എണ്ണം താരതമ്യേന ഒരുപാട് കൂടുതലാണ്.' },
-    { icon: '⚠️', text: 'ഈ കോഴ്‌സുകൾ പ്രൊഫഷണൽ കോഴ്സുകൾ അല്ല. ഈ കോഴ്‌സുകളിൽ ജോലി ചെയ്യാനുള്ള കഴിവുകൾ ഉൾപെടുത്തിയിട്ടില്ല.' },
+  { icon: '⚠️', text: 'ഈ കോഴ്‌സുകൾ പ്രൊഫഷണൽ കോഴ്സുകൾ അല്ല. ഈ കോഴ്‌സുകളിൽ ജോലി ചെയ്യാനുള്ള കഴിവുകൾ ഉൾപെടുത്തിയിട്ടില്ല.' },
 ]
 
 const stats = [
-  { number: '6+',    label: 'Science Streams Affected' },
+  { number: '6+', label: 'Science Streams Affected' },
   { number: '1000s', label: 'Graduates Without Jobs' },
-  { number: '1',     label: 'Solution — KFS Bridge' },
+  { number: '1', label: 'Solution — KFS Bridge' },
 ]
 
 export default function Problem() {
@@ -50,9 +50,9 @@ export default function Problem() {
             className="problem-card"
             style={{
               display: 'flex', gap: 18, alignItems: 'flex-start',
-              background: '#d4a000',
-              border: '1px solid #b38600',
-              borderLeft: '4px solid #7a3e00',
+              background: '#800000',
+              border: '1px solid #600000',
+              borderLeft: '4px solid #400000',
               borderRadius: 12,
               padding: '22px 26px', marginBottom: 18
             }}>
@@ -60,7 +60,7 @@ export default function Problem() {
             <p style={{
               fontFamily: "'Noto Sans Malayalam', sans-serif",
               fontSize: 'clamp(14px, 1.8vw, 17px)',
-              lineHeight: 1.95, color: '#0a0800', margin: 0
+              lineHeight: 1.95, color: '#ffffff', margin: 0
             }}>
               {card.text}
             </p>
@@ -78,8 +78,8 @@ export default function Problem() {
               viewport={{ once: true }} custom={i}
               style={{
                 textAlign: 'center',
-                background: '#d4a000',
-                color: '#0a0800',
+                background: '#800000',
+                color: '#ffffff',
                 borderRadius: 12,
                 padding: '28px 16px',
                 display: 'flex', flexDirection: 'column', gap: 8
@@ -87,7 +87,7 @@ export default function Problem() {
               <span style={{
                 fontFamily: 'Georgia, serif',
                 fontSize: 'clamp(26px, 4vw, 40px)',
-                fontWeight: 900, color: '#7a3e00', lineHeight: 1
+                fontWeight: 900, color: '#ffffff', lineHeight: 1
               }}>
                 {stat.number}
               </span>
